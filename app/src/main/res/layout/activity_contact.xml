@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:textAlignment="gravity"
+    tools:context=".UserActivity">
+
+    <TextView
+        android:id="@+id/lblTitle"
+        android:layout_width="412dp"
+        android:layout_height="65dp"
+        android:fontFamily="@font/agbalumo"
+        android:gravity="center"
+        android:text="Danh Ba"
+        android:textColor="#26006A"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etID"
+        android:layout_width="92dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="ID"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColor="#26006A"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etTen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTitle" />
+
+    <EditText
+        android:id="@+id/etTen"
+        android:layout_width="280dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="6dp"
+        android:ems="10"
+        android:hint="nhap ho ten"
+        android:inputType="text"
+        android:textColor="#26006A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etID"
+        app:layout_constraintTop_toBottomOf="@+id/lblTitle"
+        tools:ignore="MissingConstraints" />
+
+    <AutoCompleteTextView
+        android:id="@+id/auTinhThanh"
+        android:layout_width="155dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:hint="chon Tinh thanh"
+        android:textColor="#26006A"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etID" />
+
+    <ListView
+        android:id="@+id/lvContacts"
+        android:layout_width="410dp"
+        android:layout_height="299dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblList" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="7dp"
+        android:ems="10"
+        android:hint="nhap email"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:textColor="#26006A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/auTinhThanh"
+        app:layout_constraintTop_toBottomOf="@+id/etTen" />
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="195dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="nhap sdt"
+        android:inputType="phone"
+        android:textColor="#26006A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/auTinhThanh" />
+
+    <TextView
+        android:id="@+id/lblNgayTao"
+        android:layout_width="134dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:hint="dd/mm/yyyy"
+        android:textColor="#26006A"
+        app:layout_constraintEnd_toStartOf="@+id/btnDate"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toEndOf="@+id/etPhone"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+    <ImageButton
+        android:id="@+id/btnDate"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblNgayTao"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail"
+        app:srcCompat="@drawable/calendar"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="17dp"
+        android:text="Luu"
+        app:layout_constraintEnd_toStartOf="@+id/btnContacts"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPhone" />
+
+    <Button
+        android:id="@+id/btnContacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="189dp"
+        android:text="Danh Ba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnSave"
+        app:layout_constraintTop_toBottomOf="@+id/etPhone" />
+
+    <Button
+        android:id="@+id/btnThemMoi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="61dp"
+        android:text="Them Moi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnContacts"
+        app:layout_constraintTop_toBottomOf="@+id/lblNgayTao" />
+
+    <TextView
+        android:id="@+id/lblList"
+        android:layout_width="395dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="6dp"
+        android:fontFamily="@font/agbalumo"
+        android:text="Danh sach danh ba"
+        android:textColor="#B31105"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSave" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
